@@ -1,94 +1,36 @@
 <html>
     <head>
-        Swagalicious HuskySite
+
+        <title> Huskies love Jquery </title>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <style type="text/css">
+            .circle{background-color: green; height: 100px; width: 100px; border-radius: 50%;}
+        </style>
+
 
     </head>
 
     <body>
-        <h1>This is Kevin <sup>the</sup> Guo's website!!! woot!</h1>
-
-        <h3>woot woot!!!</h3>'
-        <p id = "top">
-            Hi! I am a <strong>lot</strong> of text. Did you know huskies are <em>amazing??</em> They are so awesome!! <br />
-            I <ins>also</ins> love penguins. They are pretty cool too. Haha! cool!!1 Did you get it?? <br />
-            also I like <del>ping</del> <del>isabella</del> nobody, because I'm an <strong>independent</strong> young man, and I'm over them. <sub>not really</sub>
+        <p id="swagText" class="circle">
+            YoloSWAG
         </p>
 
+        <button id="fadeButton">sweg</button>
 
-        <ol>
-            List of other things Kevin likes
-            <li>
-                Candy
-            </li>
-            <li>
-                Trees
-            </li>
-            <li>
-                Oregon (and the pacific northwest)
-            </li>
-        </ol>
+        <script type="text/javascript">
+            $("#fadeButton").click(function()
+            {
+                $(".circle").animate({width: "400px",
+                                      height: "400px",
+                                      marginLeft: "100px",
+                                      marginTop: "100px",},
+                                      2000,
+                                      function(){$(this).css("background-color", "red");})
+            })
+        </script>
 
-        <hr />
-
-        <form>
-            <p>
-                What do you think about huskies? <input type="text" value = "yes">
-            </p>
-
-            <p>
-                you like huskies <input type = "checkbox" />
-            </p>
-            <p>
-                you like pie <input type = "radio" name = "food" />
-            </p>
-            <p>
-                you like cake <input type = "radio" name = "food" />
-            </p>
-
-            <p>
-                Favorite city:
-                    <select>
-                        <option selected>
-                            Portland
-                        </option>
-                        <option>
-                            Seattle
-                        </option>
-                        <option>
-                            Vancouver
-                        </option>
-                    </select>
-            </p>
-
-            <p>
-                <input type = "submit" value = "click here if you love huskies!" />
-            </p>
-        </form>
-
-        <table>
-            <thead>
-                <th> Husky </th>
-                <th> color </th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Bob</td>
-                    <td>Grey</td>
-                </tr>
-            </tbody>
-        </table>
-        <p>
-            <a href = "https://github.com/KevinTheGuo/atom-theme-Cascadia"> look at my beautiful theme!! </a>
-        </p>
-        <a href = https://www.google.com/search?q=husky&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi4l8SLuZHUAhVp_4MKHdU3A0UQ_AUICigB&biw=1280&bih=591> <img src = "husky.jpg" /></a>
-        <p>
-            this is a husky!!!
-        </p>
-        &lt;
-        <a href = #top>go to the top</a>
-
-        <iframe src = https://www.w3schools.com/colors/colors_picker.asp></iframe>
 
     </body>
-
 </html>

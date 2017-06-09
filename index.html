@@ -13,10 +13,14 @@
     </head>
 
     <body>
+        <p>
+            Henlo.
+        </p>
         <script type="text/javascript">
-            $.ajax("info.txt").done(function()
+            $.ajax("info.txt").done(function(data)
             {
                 alert(data);
+                $("p").html(data);
             }).fail(function()
             {
                 alert("Huskies are sad.")

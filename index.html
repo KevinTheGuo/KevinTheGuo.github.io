@@ -6,28 +6,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <style type="text/css">
-            .circle{background-color: green; height: 100px; width: 100px; border-radius: 50%;}
+
         </style>
 
 
     </head>
 
     <body>
-        <p id="swagText" class="circle">
-            YoloSWAG
-        </p>
+
 
         <button id="fadeButton">sweg</button>
 
         <script type="text/javascript">
-            $("#fadeButton").click(function()
+            $.get("info.txt", function(data)
             {
-                $(".circle").animate({width: "400px",
-                                      height: "400px",
-                                      marginLeft: "100px",
-                                      marginTop: "100px",},
-                                      2000,
-                                      function(){$(this).css("background-color", "red");})
+                alert(data);
             })
         </script>
 

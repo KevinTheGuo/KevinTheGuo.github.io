@@ -13,12 +13,8 @@
     </head>
 
     <body>
-
-
-        <button id="fadeButton">sweg</button>
-
         <script type="text/javascript">
-            $.get("info.txt", function(data)
+            $.ajax("info.txt").done(function()
             {
                 alert(data);
             })

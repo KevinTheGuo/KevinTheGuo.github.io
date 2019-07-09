@@ -1,73 +1,15 @@
-<html>
-    <head>
-
-        <title> Huskies loves Javascript </title>
-
-        <style type="text/css">
-            #appear{color: #80d4ff;}
-        </style>
-
-
-    </head>
-
-    <body>
-        <h1>BikeTracker 3001</h1>
-
-        <p>
-            Please select your bike number to request
-        </p>
-        <input type = "text" id = "RequestNum"/>
-        <p>
-            <button id="Submit">Submit Request</button>
-        </p>
-
-        <script type = "text/javascript">
-
-        document.getElementById('Submit').onclick = function()
-        {
-            bikeNum = document.getElementById('RequestNum').value;
-            post("http://viaswag.hack.viasat.io:8081",{bike: bikeNum, name: 'Mark Dankberg"'})
-        }
-
-        post("http://viaswag.hack.viasat.io:8081",{bike: '32', name: 'Mark Dankberg'})
-/*
-        fetch('http://viaswag.hack.viasat.io:8081?deviceID=0&othervariable=52')
-        .then((resp) => resp.json()) // Transform the data into json
-        .then(function(data) {
-            alert("it's working")
-            alert(data)
-        })
-        .catch(function(error) {
-            alert("something didnt work")
-        });
-*/
-
-        function post(path, params, method) {
-            method = method || "post"; // Set method to post by default if not specified.
-
-            // The rest of this code assumes you are not using a library.
-            // It can be made less wordy if you use one.
-            var form = document.createElement("form");
-            form.setAttribute("method", method);
-            form.setAttribute("action", path);
-
-            for(var key in params) {
-                if(params.hasOwnProperty(key)) {
-                    var hiddenField = document.createElement("input");
-                    hiddenField.setAttribute("type", "hidden");
-                    hiddenField.setAttribute("name", key);
-                    hiddenField.setAttribute("value", params[key]);
-
-                    form.appendChild(hiddenField);
-                 }
-            }
-
-            document.body.appendChild(form);
-            form.submit();
-        }
-
-
-        </script>
-
-    </body>
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>Kevin the Guo</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <img class="img-fluid" src="Krabi.jpg" alt="Beach">
+  </body>
 </html>
